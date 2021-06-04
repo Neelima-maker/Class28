@@ -7,7 +7,7 @@ var engine, world;
 var box1, pig1;
 var backgroundImg;
 var platform,fixedlog , chain1,sling1;
-
+var platform1
 
 function preload() {
     backgroundImg = loadImage("sprites/bg.png");
@@ -17,7 +17,7 @@ function setup(){
     var canvas = createCanvas(1200,400);
     engine = Engine.create();
     world = engine.world;
-
+platform1 = new Ground(160,350,60,200)
     ground = new Ground(600,400,1200,20)
     platform = new Ground(150,310,300,180);
     box1 = new Box(700,320,70,70);
@@ -65,6 +65,7 @@ function draw(){
 
     fixedlog.display();
     sling1.display();
+    platform1.display();
 
 }
 function mouseDragged(){
