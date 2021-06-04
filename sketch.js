@@ -7,7 +7,7 @@ var engine, world;
 var box1, pig1;
 var backgroundImg;
 var platform,fixedlog , chain1,sling1;
-var platform1
+
 
 function preload() {
     backgroundImg = loadImage("sprites/bg.png");
@@ -18,7 +18,6 @@ function setup(){
     engine = Engine.create();
     world = engine.world;
 
-    platform1 = new Ground(160,350,30,190);
     ground = new Ground(600,400,1200,20)
     platform = new Ground(150,310,300,180);
     box1 = new Box(700,320,70,70);
@@ -37,7 +36,7 @@ function setup(){
     log5 = new Log(870,120,150, -PI/7);
     fixedlog = new Log(230,180,80,PI/2);
     bird = new Bird(100,100);
-    sling1 = new slingshot(bird.body ,{x:200, y:100});
+    sling1 = new Slingshot(bird.body ,{x:200, y:100});
 }
 
 function draw(){
@@ -63,7 +62,7 @@ function draw(){
 
     bird.display();
     platform.display();
-    platform1.display();
+
     fixedlog.display();
     sling1.display();
 
